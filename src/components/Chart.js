@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 
 class Chart extends Component {
-    constructor() {
+    constructor(props) {
         super(props)
         this.state = {
             chartData: {
@@ -37,7 +37,7 @@ class Chart extends Component {
         return (
             <div className="chart">
                 <Bar
-                    data={data}
+                    data={this.state.chartData}
                     options={{
                         maintainAspectRatio: false
                     }} />
